@@ -1,0 +1,49 @@
+@import "./mixin";
+
+$color-red: rgb(194,56,43);
+$color-gray: rgb(214,215,220);
+$color-blue: rgb(58,78,110);
+$color-dark-gray: rgb(117,131,153);
+
+.container {
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h1 {
+            font-size: 200%;
+            background-color: $color-red;
+            color: white;
+            border-radius: 50px 0px 0px 50px;
+            padding: 0 20px 0 20px;
+
+        }
+        img {
+            width: 70px;
+            height: 70px;
+            margin-left: 10px;
+        }
+
+    }
+
+
+    .profiles {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}
+
+// @include desktop() {
+//     .grid {
+//       width: 100%;
+//       flex-direction: column;
+//     }
+//   }
+
