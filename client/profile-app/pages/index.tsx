@@ -1,9 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { Carousel } from 'react-bootstrap'
 import styles from '../styles/Home.module.scss'
+import Router from 'next/router'
 
 export default function Home() {
-  // const [emai, setEmail] = 
   return (
     <div className={styles.container}>
       <Head>
@@ -20,17 +21,37 @@ export default function Home() {
         <p className={styles.description}>
           <code className={styles.code}>create and save your profile here!</code>
         </p>
+        <Carousel>
+          <Carousel.Item interval={1500}>
+            <img
+              className=""
+              src="/batman.png"
+              alt="First slide"
+            />
+            <Carousel.Caption>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item interval={1500}>
+            <img
+              className=""
+              src="/capt.png"
+              alt="Second slide"
+            />
+            <Carousel.Caption>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item interval={1500}>
+            <img
+              className=""
+              src="/wonder.png"
+              alt="Third slide"
+            />
+            <Carousel.Caption>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
         <div>
-          <p>Sign-in Here</p>
-          <div class="mb-3">
-            <label  class="form-label">Email</label>
-            <input type="email" class="form-control" id="formGroupExampleInput" placeholder="email"/>
-          </div>
-          <div class="mb-3">
-            <label  class="form-label">Password</label>
-            <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="password"/>
-          </div>
-          <button type="button" class="btn btn-danger">Submit</button>
+          <button onClick={() => Router.push("/profiles")} style={{marginTop: "50px"}} type="button" className="btn btn-danger">Get Started!</button>
         </div>
       </main>
 

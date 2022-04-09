@@ -16,22 +16,58 @@ $color-dark-gray: rgb(117,131,153);
         display: flex;
         align-items: center;
         justify-content: center;
+        cursor: pointer;
+
         h1 {
             font-size: 200%;
             background-color: $color-red;
             color: white;
             border-radius: 50px 0px 0px 50px;
             padding: 0 20px 0 20px;
-
+            font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+            Bitstream Vera Sans Mono, Courier New, monospace;
+            font-weight: bold;
         }
+
         img {
             width: 70px;
             height: 70px;
             margin-left: 10px;
         }
 
-    }
+        .badge {
+            margin-left: 10px;
+            visibility: hidden;
+        }
 
+        &:hover {
+            h1 {
+                color: $color-red;
+                background-color: white;
+                border: 1px solid black;
+            }
+
+            img {
+                background-color: $color-red; 
+                border-radius: 99%;
+            }
+
+            .badge {
+                visibility: visible;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            h1 {
+                font-size: 20px;
+            }
+
+            img {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
 
     .profiles {
         display: flex;
