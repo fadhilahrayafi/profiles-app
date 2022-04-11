@@ -1,8 +1,8 @@
-## profiles-app
+# profiles-app
 This app is for creating and storing profiles data
 You can also edit and add work experiences here
 
-# For Client side:
+## For Client side:
 * React Next Js
 * Typescript
 * deployed on firebase https://profile-app-glints.web.app/
@@ -14,7 +14,7 @@ For Running it on local
 
 --------------------------------------------------------
 
-# For Server side:
+## For Server side:
 * Node Js
 * Express Js
 * PSQL
@@ -31,7 +31,9 @@ Endpont Path:
 1. Get all profiles
     - Method: GET
     - PATH: https://profile-app-glints.herokuapp.com/profiles
-    - RESPONSE: [
+    - RESPONSE: 
+    ```
+                [
                   {
                     profile_id: NUMBER,
                     name: STRING,
@@ -40,17 +42,20 @@ Endpont Path:
                     private: BOOLEAN
                   }
                  ]
+      ```
                  
 2. Get Profile by profile id     
     - Method: GET
     - PATH: https://profile-app-glints.herokuapp.com/profiles/:id
-    - RESPONSE: {
+    - RESPONSE: 
+    ```
+                {
                   profile_id: NUMBER,
                   name: STRING,
                   image: STRING,
                   age: NUMBER,
                   private: BOOLEAN,
-                    works: [
+                  works: [
                              {
                                 id: NUMBER,
                                 profile_id: NUMBER,
@@ -63,33 +68,45 @@ Endpont Path:
                                 description: STRING
                               }
                             ]
+                      }
+    ```
+    
 3. Update Profile
     - Method: PUT
     - PATH: https://profile-app-glints.herokuapp.com/profile/:id
-    - REQUEST BODY: {
+    - REQUEST BODY: 
+    ```
+                    {
                       profile_id: NUMBER,
                       name: STRING,
                       image: STRING,
                       age: NUMBER,
                       private: BOOLEAN
                      }
-    - RESPONSE: {
+    ```
+    - RESPONSE: 
+    ```
+                {
                   profile_id: NUMBER,
                   name: STRING,
                   image: STRING,
                   age: NUMBER,
                   private: BOOLEAN
                 }
-                
+   ```  
+     
 5. Create Profile
     - Method: POST
     - PATH: https://profile-app-glints.herokuapp.com/profile
-    - REQUEST BODY: {
+    - REQUEST BODY: 
+    ```
+                    {
                       name: STRING,
                       image: STRING,
                       age: NUMBER,
                       private: BOOLEAN
                      }
+    ```
     - RESPONSE: {
                   profile_id: NUMBER,
                   name: STRING,
@@ -97,16 +114,22 @@ Endpont Path:
                   age: NUMBER,
                   private: BOOLEAN
                 } 
-                
+     ```
+     
 6. Delete Profile
     - Method: DELETE
     - PATH: https://profile-app-glints.herokuapp.com/profile:id
-    - RESPONSE: {"profile with id: ${id} was deleted"}
+    - RESPONSE: 
+    ```
+    {"profile with id: ${id} was deleted"}
+    ```
 
 7. Create Work Experience
     - Method: POST
     - PATH: https://profile-app-glints.herokuapp.com/work
-    - REQUEST BODY: {
+    - REQUEST BODY: 
+    ```
+                    {
                       profile_id: NUMBER,
                       company_name: STRING,
                       company_logo: STRING,
@@ -116,7 +139,10 @@ Endpont Path:
                       title: STRING,
                       description: STRING
                      }
-    - RESPONSE: {
+     ```                
+    - RESPONSE: 
+    ```
+                {
                   id: NUMBER,
                   profile_id: NUMBER,
                   company_name: STRING,
@@ -127,11 +153,14 @@ Endpont Path:
                   title: STRING,
                   description: STRING
                 } 
+    ```            
                 
 8. Update Work Experience
     - Method: PUT
     - PATH: https://profile-app-glints.herokuapp.com/work/:id
-    - REQUEST BODY: {
+    - REQUEST BODY: 
+    ```
+                    {
                       id: NUMBER,
                       company_name: STRING,
                       company_logo: STRING,
@@ -141,7 +170,10 @@ Endpont Path:
                       title: STRING,
                       description: STRING
                      }
-    - RESPONSE: {
+    ```                 
+    - RESPONSE: 
+    ```
+                {
                   id: NUMBER,
                   profile_id: NUMBER,
                   company_name: STRING,
@@ -152,8 +184,12 @@ Endpont Path:
                   title: STRING,
                   description: STRING
                 } 
+   ```             
                 
 9. Delete Work Experience
     - Method: DELETE
     - PATH: https://profile-app-glints.herokuapp.com/work/:id
-    - RESPONSE: {"works with id: ${id} was deleted"} 
+    - RESPONSE: 
+    ```
+    - {"works with id: ${id} was deleted"} 
+    ```
